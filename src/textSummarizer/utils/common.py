@@ -1,5 +1,5 @@
 import os
-import box.exceptions import BoxValueError
+from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
 from ensure import ensure_annotations
@@ -58,5 +58,5 @@ def get_size(path: Path)-> str:
     
     """
     
-    size_in_kb = Round(os.path.getsize(path)/1024)
+    size_in_kb = round(os.path.getsize(path)/1024)
     return f"~{size_in_kb} KB"
