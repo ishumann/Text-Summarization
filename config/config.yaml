@@ -14,7 +14,7 @@ data_validation:
   ALL_REQUIRED_FILES: ["train", "test", "validation"]
 
 
-data_validation:
+data_transformation:
   root_dir: artifacts/data_tranformation
   data_path: artifacts/data_ingestion/samsum_dataset
   tokenizer_name: google/pegasus-cnn_dailymail
