@@ -1,7 +1,7 @@
 from textSummarizer.logging import logger
 from textSummarizer.config.configuration import ConfigurationManager
-from textSummarizer.components.data_transformation import DataTransformation
 
+from textSummarizer.components.data_transformation import DataTransformation
 
 class DataTransformationTrainingPipeline:
     def __init__(self):
