@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 artifacts/*
 artifacts/data_ingestions
+
+pegasus-samsum-model

@@ -2,10 +2,12 @@ transformers
 transformers[sentencepiece] 
 datasets 
 sacrebleu 
-rouge_score 
+rouge_score
+scikit-learn
 py7zr 
 pandas 
-nltk 
+nltk
+evaluate
 tqdm 
 pyYAML 
 matplotlib 
