@@ -6,7 +6,7 @@ from transformers import pipeline
 
 
 class PredictionPipeline:
-    def __init__(self, config: ModelEvaluationConfig):
+    def __init__(self):
         self.config = ConfigurationManager().get_model_evaluation_config()
         
         
@@ -21,7 +21,7 @@ class PredictionPipeline:
         
         print("Dialogue:")
         print(text)
-        print(pipe(text, **gen_kwargs)[0]["summary_text"])
+        output = pipe(text, **gen_kwargs)[0]["summary_text"]
 
         print("\n Model Summary:")
         print(output)

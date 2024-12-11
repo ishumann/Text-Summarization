@@ -5,55 +5,55 @@ from textSummarizer.pipeline.stage_04_model_pipeline import ModelTrainingPipelin
 from textSummarizer.pipeline.stage_05_model_evaluation_pipeline import ModelEvaluationPipeline
 from textSummarizer.logging import logger
 
-# STAGE_NAME = "Date Ingestion"
+STAGE_NAME = "Date Ingestion"
 
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     data_ingestion = DataIngestionTrainingPipeline()
-#     data_ingestion.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 
 
-# STAGE_NAME = "Date Validation"
+STAGE_NAME = "Date Validation"
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     data_validation = DataValidationTrainingPipeline()
-#     data_validation.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
-
-
-# STAGE_NAME = "Date Transformation"
-
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     data_transformation = DataTransformationTrainingPipeline()
-#     data_transformation.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    data_validation = DataValidationTrainingPipeline()
+    data_validation.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
-# STAGE_NAME = "Model Training"
+STAGE_NAME = "Date Transformation"
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     model_training = ModelTrainingPipeline()
-#     model_training.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    data_transformation = DataTransformationTrainingPipeline()
+    data_transformation.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+
+STAGE_NAME = "Model Training"
+
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    model_training = ModelTrainingPipeline()
+    model_training.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 STAGE_NAME = "Model Evaluation"
