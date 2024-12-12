@@ -18,16 +18,16 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Text-Summarization
+https://github.com/ishumann/Text-Summarization
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n summary python=3.8 -y
+conda create -n nlpproj python=3.10 -y
 ```
 
 ```bash
-conda activate summary
+conda activate nlpproj
 ```
 
 
@@ -49,9 +49,9 @@ open up you local host and port
 
 
 ```bash
-Author: Krish Naik
-Data Scientist
-Email: krishnaik06@gmail.com
+Author: Ishuman Agrawal
+Occupation: Data Scientist
+Email: mann.agrawal17@gmail.com
 
 ```
 
@@ -88,12 +88,16 @@ Email: krishnaik06@gmail.com
 
 	2. AmazonEC2FullAccess
 
-	
+    ![AWS Deployment](readme_img/image.png)
+
+
+
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+    - Save the URI: 050407812497.dkr.ecr.us-east-1.amazonaws.com/text-s
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
+
 
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
