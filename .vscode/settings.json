@@ -13,5 +13,8 @@
         "sentencepiece",
         "tqdm",
         "uvicorn"
-    ]
+    ],
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Github/Text-Summarization/.github/workflows/main.yaml"
+    }
 }
