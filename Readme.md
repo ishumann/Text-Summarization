@@ -63,27 +63,30 @@ Email: mann.agrawal17@gmail.com
 
 ## 2. Create IAM user for deployment #with specific access
 
+	
+
+	#Policy:
+
+	1. AmazonEC2ContainerRegistryFullAccess
+
+	2. AmazonEC2FullAccess
+
 ![](/readme_img/iam.png)
-
-
 ![](/readme_img/access_key.png)
 ![](/readme_img/access_key_2.png)
 ![](/readme_img/access_key_3.png)
 ![](/readme_img/access_key_4.png)
+
 ![](/readme_img/set_permissions.png)
 ![](/readme_img/set_permissions_2.png)
 ![](/readme_img/set_permissions_3.png)
 
-	
-	1. ECR: Elastic Container registry to save your docker image in aws
-    #Description: About the deployment
-![](/readme_img/ecr.png)
-![](/readme_img/ecr2.png)
-![](/readme_img/ecr3.png)
-![](/readme_img/ecr4.png)
 
-	2. EC2 access : It is virtual machine
-![](/readme_img/ec2.png)
+
+## 3. Create ECR repo to store/save docker image
+	1. ECR: Elastic Container registry to save your docker image in aws
+    
+	#Description: About the deployment
 
 	1. Build docker image of the source code
 
@@ -95,26 +98,29 @@ Email: mann.agrawal17@gmail.com
 
 	5. Lauch your docker image in EC2
 
-	#Policy:
+![](/readme_img/ecr.png)
+![](/readme_img/ecr2.png)
+![](/readme_img/ecr3.png)
+![](/readme_img/ecr4.png)
 
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-
-
-
-## 3. Create ECR repo to store/save docker image
     - Save the URI: 050407812497.dkr.ecr.us-east-1.amazonaws.com/text-s
-
 	
 ## 4. Create EC2 machine (Ubuntu) 
 
+	2. EC2 access : It is virtual machine
+![](/readme_img/ec2.png)
+![](/readme_img/ec22.png)
+![](/readme_img/ec23.png)
+![](/readme_img/ec24.png)
+![](/readme_img/ec25.png)
 
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
-	
-	#optinal
+
+![](/readme_img/ec2_install_and_config.png)
+![](/readme_img/ec2_install_and_config2.png)
+
+	#optional
 
 	sudo apt-get update -y
 
@@ -129,19 +135,59 @@ Email: mann.agrawal17@gmail.com
 	sudo usermod -aG docker ubuntu
 
 	newgrp docker
+
+![](/readme_img/ec2_install_and_config3.png)
 	
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
+![](/readme_img/gitaction.png)
+
+	Copy the runner commands and configuration code and paste and execute it in the ec2 instance terminal one by one.
+
+![](/readme_img/gitaction2.png)
+![](/readme_img/gitaction3.png)
+
+	To turn gitaction offline to idle state, execute "./run.sh" on ec2 terminal
 
 # 7. Setup github secrets:
 
-    AWS_ACCESS_KEY_ID=
+![](/readme_img/secrets.png)
 
-    AWS_SECRET_ACCESS_KEY=
+	secrets keys are provided in the csv file you downloaded
 
-    AWS_REGION = us-east-1
+![](/readme_img/access_key_4.png)
+![](/readme_img/secrets2.png)
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ACCESS_KEY_ID  #depends on your key
 
-    ECR_REPOSITORY_NAME = text-s
+    AWS_SECRET_ACCESS_KEY #depends on your key
+
+    AWS_REGION  us-east-1 # depends on your region
+
+    AWS_ECR_LOGIN_URI  	#depends on your URI
+
+    ECR_REPOSITORY_NAME = text-s #depends on your repository name
+
+# 8 Push the code to github
+
+![](/readme_img/CICD.png)
+![](/readme_img/CICD2.png)
+![](/readme_img/CICD3.png)
+	
+# 9. Configure Port Mapping in EC2
+
+![](/readme_img/portmapping.png)
+![](/readme_img/portmapping2.png)
+![](/readme_img/portmapping3.png)
+![](/readme_img/portmapping4.png)
+![](/readme_img/portmapping5.png)
+![](/readme_img/portmapping5.png)
+
+
+# 10. Finally 
+
+Open the public IP of your EC2 instance in the browser to see the deployed application.
+
+![](/readme_img/final.png)
+
