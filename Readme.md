@@ -61,16 +61,29 @@ Email: mann.agrawal17@gmail.com
 
 ## 1. Login to AWS console.
 
-## 2. Create IAM user for deployment
+## 2. Create IAM user for deployment #with specific access
 
-	#with specific access
-
-	1. EC2 access : It is virtual machine
-
-	2. ECR: Elastic Container registry to save your docker image in aws
+![](/readme_img/iam.png)
 
 
-	#Description: About the deployment
+![](/readme_img/access_key.png)
+![](/readme_img/access_key_2.png)
+![](/readme_img/access_key_3.png)
+![](/readme_img/access_key_4.png)
+![](/readme_img/set_permissions.png)
+![](/readme_img/set_permissions_2.png)
+![](/readme_img/set_permissions_3.png)
+
+	
+	1. ECR: Elastic Container registry to save your docker image in aws
+    #Description: About the deployment
+![](/readme_img/ecr.png)
+![](/readme_img/ecr2.png)
+![](/readme_img/ecr3.png)
+![](/readme_img/ecr4.png)
+
+	2. EC2 access : It is virtual machine
+![](/readme_img/ec2.png)
 
 	1. Build docker image of the source code
 
@@ -88,7 +101,6 @@ Email: mann.agrawal17@gmail.com
 
 	2. AmazonEC2FullAccess
 
-    ![AWS Deployment](readme_img/image.png)
 
 
 
